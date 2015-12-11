@@ -1,0 +1,18 @@
+universe = vanilla
+executable = run_parsnp.sh 
+arguments = "tb_moldova.1.fastas_gtf_bundle.tar.gz /opt/data/mtuberculosis/MtbNCBIH37Rv.fa 10"
+
+output = parsnp.out
+error = parsnp.err
+log = parsnp.log
+
+transfer_executable = TRUE
+should_transfer_files = YES
+when_to_transfer_output = ON_EXIT
+transfer_input_files = tb_moldova.1.fastas_gtf_bundle.tar.gz
+
+request_cpus = 10
+request_memory = 4GB
+request_disk = 1GB
+
+queue
