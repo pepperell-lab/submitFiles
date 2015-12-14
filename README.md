@@ -20,3 +20,8 @@ This submit file executes a corresponding bash script (run_parsnp.sh) with three
 run_parsnp.sh
 -------------
 This is a simple bash script that will unpack the compressed genomes, make and move them into a directory, execute parsnp, and finally compress parsnp's output (a folder containing various files) so that it can be transferred back. 
+
+blast.submit
+------------
+This submit file runs blastp of files named $(PROCESS).tsv against a blast
+database (which is transferred with the jobs).
