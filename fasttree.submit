@@ -1,6 +1,6 @@
 universe = vanilla
-executable = /opt/PepPrograms/fasttree_linux
-arguments = "-nt -gamma -slow -boot 10 dummy_snps.fasta"
+executable = /opt/PepPrograms/FastTree
+arguments = "-nt -gamma -slow -boot 100 160106_selected_snps.fasta"
 
 output = tree.out
 error = fasttree.err
@@ -9,7 +9,7 @@ log = fasttree.log
 transfer_executable = FALSE
 should_transfer_files = YES
 when_to_transfer_output = ON_EXIT
-transfer_input_files = dummy_snps.fasta
+transfer_input_files = 160106_selected_snps.fasta
 
 request_cpus = 1
 request_memory = 50MB
