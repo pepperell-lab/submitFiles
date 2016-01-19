@@ -25,3 +25,9 @@ blast.submit
 ------------
 This submit file runs blastp of files named $(PROCESS).tsv against a blast
 database (which is transferred with the jobs).
+
+RAxML
+------------
+Folder contains three submit files, one for each step of generating a bootstrapped ML tree with RAxML. "bestTree" and "bootstrap" steps can be run at the same time. Threads can differ between jobs. Dag needs to be edited with alignment name, desired output suffixes, and the number of threads. Requested memory and space is based on an alignment of ~600 Mtb samples and may not reflect others needs - please change as needed for your purposes.
+
+>condor_submit_dag RAxML.dag
