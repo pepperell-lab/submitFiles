@@ -1,0 +1,18 @@
+universe = vanilla
+executable = /opt/PepPrograms/standard-RAxML/raxmlHPC-PTHREADS-SSE3 
+arguments = "-T $(THREADS) -m GTRGAMMA -p 123 -f b -t RAxML_bestTree.$(OUT1) -z RAxML_bootstrap.$(OUT2) -n $(OUT3)"
+
+output = combine.out
+error = combine.err
+log = combine.log
+
+transfer_executable = FALSE
+transfer_input_files = RAxML_bestTree.$(OUT1), RAxML_bootstrap.$(OUT2)
+should_transfer_files = YES
+when_to_transfer_output = ON_EXIT
+
+request_cpus = $(THREADS)
+request_memory = 1MB
+request_disk = 50MB
+
+queue
