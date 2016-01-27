@@ -1,0 +1,21 @@
+
+universe = vanilla
+executable =  Submit_BBNorm.sh
+arguments = "$(RUN)"
+
+transfer_input_files = $(RUN)_1.fastq,$(RUN)_2.fastq
+request_cpus = 5
+
+output = BB_$(RUN).out
+error =  BB_$(RUN).err
+log = BB_$(RUN).log
+
+transfer_executable = TRUE
+should_transfer_files = YES
+when_to_transfer_output = ON_EXIT
+transfer_input_files = $(RUN)_1.fastq,$(RUN)_2.fastq
+
+request_memory = 4GB
+request_disk = 1GB
+
+queue
