@@ -8,7 +8,7 @@ VARS bootstrap ALN="ESX_concatenated_alignment.fasta"
 VARS bootstrap OUT2="esx_bootstrap"
 VARS bootstrap THREADS="4"
 
-JOB combine RAxML_bestTree.submit
+JOB combine RAxML_combine.submit
 VARS combine THREADS="4"
 VARS combine OUT1="esx_bestTree"
 VARS combine OUT2="esx_bootstrap"
