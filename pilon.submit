@@ -1,0 +1,17 @@
+universe = vanilla
+executable = pilon.sh
+arguments = "$(REF) $(BAM) $(OUT)"
+
+output = $(OUT).out
+error = $(OUT).err
+log = $(OUT).log
+
+should_transfer_files = YES
+when_to_transfer_output = ON_EXIT
+transfer_input_files = $(BAM)
+
+request_cpus = 1
+request_memory = 2GB
+request_disk = 2GB
+
+queue
