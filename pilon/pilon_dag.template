@@ -1,3 +1,4 @@
 JOB ${run} pilon.submit
 VARS ${run} RUN="${run}"
 VARS ${run} REF="${ref}"
+VARS ${run} READS="${reads}"

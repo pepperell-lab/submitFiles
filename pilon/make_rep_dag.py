@@ -11,7 +11,7 @@ from string import Template
 def get_args():    
     parser = argparse.ArgumentParser(description='Pipeline for reference \
 guided assembly')
-    parser.add_argument("input", help="File describing read data information")
+    parser.add_argument("input", help="Sample Name (*realn.bam), unpaired/frags/jumps")
     parser.add_argument("reference", help="Fasta file of reference genome")
     parser.add_argument("dagtemplate", help="dag template")
     parser.add_argument("outfilename", help="out.dag")
@@ -30,6 +30,7 @@ with open(args.input, 'r') as infile, open(args.outfilename, 'w') as dagfile:
         variableMap = {}
         variableMap['ref'] = args.reference
         variableMap['run'] = inputList[0]
+        variableMap['reads'] = inputList[1]
         #variableMap['sample'] = inputList[1]
         #variableMap['lib'] = inputList[2]
         #variableMap['platform'] = inputList[3].lower()

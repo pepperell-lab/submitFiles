@@ -1,6 +1,6 @@
 universe = vanilla
 executable = pilon.sh
-arguments = "$(REF) $(BAM) $(OUT)"
+arguments = "$(REF) $(BAM) $(OUT) $(READS)"
 
 output = $(OUT).out
 error = $(OUT).err
