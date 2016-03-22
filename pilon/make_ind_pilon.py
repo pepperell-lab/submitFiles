@@ -11,7 +11,7 @@ from string import Template
 def get_args():    
     parser = argparse.ArgumentParser(description='Pipeline for pilon')
     parser.add_argument("input", help="Sample Name (ERS#), unpaired/frags/jumps:ERR#")
-    parser.add_argument("reference", help="Fasta file of reference genome")
+    parser.add_argument("reference", help="Path to fasta file of reference genome, e.g. /opt/data/mtuberculosis/H37Rv.fa")
     parser.add_argument("pathtobam", help="path to folder containing bams")
 
     return parser.parse_args()
