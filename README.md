@@ -41,3 +41,8 @@ Folder contains submit files to run maximum likelihood tree and bootstrapping wi
 Pilon
 ------------
 Folder contains scripts to run pilon in variant calling mode under the following parameters: --variant --mindepth 10 --minmq 40 --minqual 20. Beginning with your "pipelineIn.txt" file, use the make_pilon_input.py script to generate a file containing one line for each Biosample (SRS/ERS) in your "pipelineIn.txt" file with the runs and strategy (paired == frags, single == unpaired, matepair == jumps) associated with the biosample. Feed this file into the make_ind_pilon.py scripts to generate individual submit and sh files for each biosample. Then submit them to conodor!
+
+mugsy
+------------
+Directory contains shell script and submit file to run mugsy. Submit file should
+be edited to contain file names for your samples. Reference genome is first.

@@ -1,0 +1,18 @@
+universe = vanilla
+executable = run_mugsy.sh
+arguments = "sapro_denovo StaphSaprophyticusATCC15305.fa JXBG01.1.fasta REF_Ss_troy_2014-0209.fasta KACC16562.fasta Ssapro-055.fasta NCTC7540.fasta Ssapro-063.fasta NCTC7666.fasta Staphylococcus_saprophyticus_758_SSAP.fasta NCTC7687.fasta Staphylococcus_saprophyticus_FDAARGOS_137.fasta NCTC7692.fasta Staphylococcus_saprophyticus_FDAARGOS_168.fasta"
+
+
+output = mugsy.out
+error = mugsy.err
+log = mugsy.log
+
+should_transfer_files = YES
+when_to_transfer_output = ON_EXIT
+transfer_input_files = StaphSaprophyticusATCC15305.fa,JXBG01.1.fasta,REF_Ss_troy_2014-0209.fasta,KACC16562.fasta,Ssapro-055.fasta,NCTC7540.fasta,Ssapro-063.fasta,NCTC7666.fasta,Staphylococcus_saprophyticus_758_SSAP.fasta,NCTC7687.fasta,Staphylococcus_saprophyticus_FDAARGOS_137.fasta,NCTC7692.fasta,Staphylococcus_saprophyticus_FDAARGOS_168.fasta
+
+request_cpus = 1
+request_memory = 1GB
+request_disk = 500MB
+
+queue
