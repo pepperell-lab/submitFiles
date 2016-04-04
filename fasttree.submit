@@ -1,5 +1,5 @@
 universe = vanilla
-executable = /opt/PepPrograms/FastTree-2.1.8
+executable = /opt/PepPrograms/FastTree-2.1.9
 arguments = "-nt -gamma -slow -boot 100 <input.fasta>"
 
 output = tree.out
