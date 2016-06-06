@@ -1,0 +1,16 @@
+universe = vanilla
+executable = assemble_esx_plasmids.sh
+arguments = "$(accession) $(genus) $(species) $(strain)"
+
+output = $(accession).out
+error = $(accession).err
+log = $(accession).log
+
+should_transfer_files = YES
+when_to_transfer_output = ON_EXIT
+
+request_cpus = 8
+request_memory = 16GB
+request_disk = 30GB
+
+queue
