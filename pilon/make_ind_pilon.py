@@ -65,7 +65,7 @@ def make_sh_files(d):
             arguments.append(single)
         outfilename = sample + '_pilon.sh'
         with open(outfilename, 'w') as outfile:
-            outfile.write("#!/bin/bash\n\njava -jar /opt/PepPrograms/pilon-1.16.jar --genome {0} {1} --output {2}_pilon --variant --mindepth 10 --minmq 40 --minqual 20".format(args.reference, " ".join(arguments), sample))
+            outfile.write("#!/bin/bash\n\njava -jar -Xmx2g /opt/PepPrograms/pilon-1.16.jar --genome {0} {1} --output {2}_pilon --variant --mindepth 10 --minmq 40 --minqual 20".format(args.reference, " ".join(arguments), sample))
 
 def make_dag(d):
     outfilename = args.input.split(".")[0] + ".dag"
